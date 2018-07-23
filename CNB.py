@@ -17,7 +17,7 @@ def takeAction(action, data):
             "eventName": "__action",
             "data": {
                 "action": "bet",
-                "playerName": "CasinoNiBenj",
+                "playerName": "40930",
                 "amount": 100
             }
         }))
@@ -27,7 +27,7 @@ def takeAction(action, data):
             "eventName": "__action",
             "data": {
                 "action": "call",
-                "playerName": "CasinoNiBenj"
+                "playerName": "40930"
             }
         }))
 
@@ -35,11 +35,11 @@ def takeAction(action, data):
 def doListen():
     try:
         global ws
-        ws = create_connection("ws://10.5.60.55:3001/")
+        ws = create_connection("ws://10.104.65.33:3001/")
         ws.send(json.dumps({
             "eventName": "__join",
             "data": {
-                "playerName": "CasinoNiBenj"
+                "playerName": "40930"
             }
         }))
         while 1:
